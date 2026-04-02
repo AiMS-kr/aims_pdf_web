@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import "./Component.css";
 import { FaFileDownload } from "react-icons/fa";
@@ -8,6 +9,8 @@ import { Footer } from "./component/Footer";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 
 function App() {
+  const [lang, setLang] = useState("ko");
+
   const BT = () => {
     return (
       <div className="BT-div">
@@ -17,7 +20,7 @@ function App() {
               pointer: "cursor",
               color: "white",
               alignItems: "flex-start",
-              fontSize: "20px",
+              fontSize: "18px",
             }}
           />
         </PDFDownloadLink>
@@ -28,19 +31,35 @@ function App() {
     <div className="App">
       <div className="App-div">
         <Header />
+        <div className="Lang-toggle">
+          <div className="Lang-buttons">
+            <button
+              className={lang === "ko" ? "active" : ""}
+              onClick={() => setLang("ko")}
+            >
+              KR
+            </button>
+            <button
+              className={lang === "en" ? "active" : ""}
+              onClick={() => setLang("en")}
+            >
+              EN
+            </button>
+          </div>
+          <BT />
+        </div>
         <div
           style={{
             display: "flex",
             alignItems: "flex-start",
-            marginTop: "16px",
+            marginTop: "20px",
             paddingLeft: "32px",
           }}
         >
-          <Leaflet />
-          <BT />
+          <Leaflet lang={lang} />
         </div>
       </div>
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

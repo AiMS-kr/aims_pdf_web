@@ -5,7 +5,7 @@
   justify-content: flex-start;
   max-width: 400px;
   height: 100vh;
-  background-color: #2e3035;
+  background-color: #0c2b4e;
 }
 
 .App-div {
@@ -14,7 +14,7 @@
   flex: 1;
   flex-direction: column;
   /* align-items: center; */
-  color: white;
+  color: #f4f4f4;
 }
 
 .Header-div {
@@ -24,8 +24,38 @@
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  color: white;
-  background-color: #141c44;
+  color: #141c44;
+  background-color: #f4f4f4;
+}
+
+.Lang-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 8px 0;
+}
+
+.Lang-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.Lang-toggle button {
+  padding: 4px 10px;
+  border: 1px solid #555;
+  border-radius: 40px;
+  background: transparent;
+  color: #999;
+  font-size: 9px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.Lang-toggle button.active {
+  background: #f4f4f4;
+  color: #141c44;
+  border: 1px solid #141c44;
+  font-weight: bold;
 }
 
 .Footer-div {
@@ -51,7 +81,7 @@
   align-items: flex-start;
 }
 .Footer-div-left span {
-  color: white;
+  color: #f4f4f4;
   margin: 0px 0px 8px 28px;
 }
 
@@ -59,7 +89,7 @@
   align-items: flex-end;
 }
 .Footer-div-right span {
-  color: rgb(199, 199, 199);
+  color: #f4f4f4;
   margin: 0px 52px 8px 0px;
   cursor: pointer;
 }

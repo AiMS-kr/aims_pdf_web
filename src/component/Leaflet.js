@@ -1,5 +1,5 @@
 import "../App.css";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Leaflet1 from "../img/1.jpg";
 import Leaflet2 from "../img/2.jpg";
 import Leaflet3 from "../img/3.jpg";
@@ -7,12 +7,28 @@ import Leaflet4 from "../img/4.jpg";
 import Leaflet5 from "../img/5.jpg";
 import Leaflet6 from "../img/6.jpg";
 
+import LeafletEn1 from "../img/en1.jpg";
+import LeafletEn2 from "../img/en2.jpg";
+import LeafletEn3 from "../img/en3.jpg";
+import LeafletEn4 from "../img/en4.jpg";
+import LeafletEn5 from "../img/en5.jpg";
+import LeafletEn6 from "../img/en6.jpg";
+
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../carousel.css";
 
-export const Leaflet = () => {
-  const images = [Leaflet1, Leaflet2, Leaflet3, Leaflet4, Leaflet5, Leaflet6];
+export const Leaflet = ({ lang }) => {
+  const koImages = [Leaflet1, Leaflet2, Leaflet3, Leaflet4, Leaflet5, Leaflet6];
+  const enImages = [
+    LeafletEn1,
+    LeafletEn2,
+    LeafletEn3,
+    LeafletEn4,
+    LeafletEn5,
+    LeafletEn6,
+  ];
+  const images = lang === "en" ? enImages : koImages;
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   useEffect(() => {
@@ -33,14 +49,14 @@ export const Leaflet = () => {
       <p
         style={{
           fontSize: "7px",
-          color: "#aaaaaaff",
+          color: "#f4f4f4",
           textAlign: "center",
-          fontWeight: "bold",
-          margin: "0px 0px 5px 0px",
+          margin: "0px 0px 8px 0px",
         }}
       >
-        * 오른쪽 PDF 다운로드 또는 아래 이미지를 클릭하시면 확대하여 확인할 수
-        있습니다.
+        {lang === "en"
+          ? "* Click the PDF download icon on the right or click the images below to enlarge."
+          : "* 오른쪽 PDF 다운로드 또는 아래 이미지를 클릭하시면 확대하여 확인할 수 있습니다."}
       </p>
       <Carousel
         showArrows={true}
