@@ -14,7 +14,7 @@ function App() {
   const BT = () => {
     return (
       <div className="BT-div">
-        <PDFDownloadLink document={<PdfDownload />} fileName="aims.pdf">
+        <PDFDownloadLink document={<PdfDownload lang={lang} />} fileName="aims.pdf">
           <FaFileDownload
             style={{
               pointer: "cursor",
