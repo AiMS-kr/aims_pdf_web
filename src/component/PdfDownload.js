@@ -1,7 +1,7 @@
-import Leaflet1 from "../img/leaflet1.png";
-import Leaflet2 from "../img/leaflet2.png";
-import EnLeaflet1 from "../img/enLeaflet1.png";
-import EnLeaflet2 from "../img/enLeaflet2.png";
+import Leaflet1 from "../img/leaflet1.jpg";
+import Leaflet2 from "../img/leaflet2.jpg";
+import EnLeaflet1 from "../img/enLeaflet1.jpg";
+import EnLeaflet2 from "../img/enLeaflet2.jpg";
 import { Page, Document, StyleSheet, Image } from "@react-pdf/renderer";
 
 export const PdfDownload = ({ lang }) => {
