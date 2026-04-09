@@ -2,7 +2,7 @@
 
 AIMS(Artificial Intelligence for Manufacturing System) 회사 리플렛 웹 뷰어입니다.
 
-**배포:** https://aimsqr.netlify.app/
+**배포:** https://brochure.aims.kr/
 
 ## 주요 기능
 

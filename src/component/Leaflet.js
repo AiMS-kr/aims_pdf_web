@@ -18,16 +18,17 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../carousel.css";
 
+const koImages = [Leaflet1, Leaflet2, Leaflet3, Leaflet4, Leaflet5, Leaflet6];
+const enImages = [
+  LeafletEn1,
+  LeafletEn2,
+  LeafletEn3,
+  LeafletEn4,
+  LeafletEn5,
+  LeafletEn6,
+];
+
 export const Leaflet = ({ lang }) => {
-  const koImages = [Leaflet1, Leaflet2, Leaflet3, Leaflet4, Leaflet5, Leaflet6];
-  const enImages = [
-    LeafletEn1,
-    LeafletEn2,
-    LeafletEn3,
-    LeafletEn4,
-    LeafletEn5,
-    LeafletEn6,
-  ];
   const images = lang === "en" ? enImages : koImages;
   const [selectedIndex, setSelectedIndex] = useState(null);
 
